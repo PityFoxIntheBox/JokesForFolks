@@ -18,14 +18,100 @@
 
     <TextView
         android:id="@+id/Joke"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="150dp"
         android:fontFamily="@font/loveyalikeasister"
         android:text="Ha-ha"
+        android:textColor="@color/black"
         android:textSize="20dp"
+
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/heart"
+        android:id="@+id/EmptyHeart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Joke" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="350dp"
+        android:layout_height="340dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/backmenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EmptyHeart"
+
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            
+            <LinearLayout
+                android:layout_width="310dp"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/buttonjoke"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical"
+                >
+
+                <CheckBox
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/checkbox_selector"
+                    android:button="@drawable/checkbox_selector"
+                    android:id="@+id/Any"
+                    android:checked="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Any"
+                    android:textSize="32dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/loveyalikeasister"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="20dp"
+                android:background="@drawable/line"
+                android:layout_marginTop="5dp"
+                />
+            
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/buttonjoke"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Give me a joke"
+        android:textSize="32dp"
+        android:fontFamily="@font/loveyalikeasister"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
