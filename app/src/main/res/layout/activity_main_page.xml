@@ -31,11 +31,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <CheckBox
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_marginRight="30dp"
-        android:background="@drawable/heart"
+        android:background="@drawable/checkbox_for_heart"
+        android:button="@drawable/checkbox_for_heart"
         android:id="@+id/EmptyHeart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Joke" />
@@ -49,7 +50,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EmptyHeart"
-
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:fadeScrollbars="true"
+        android:overScrollMode="never"
         >
 
         <LinearLayout
@@ -59,13 +63,15 @@
             android:orientation="vertical"
             android:gravity="center"
             >
-            
+
             <LinearLayout
+                android:onClick="CheckUncheck"
+                android:id="@+id/ButtonAny"
                 android:layout_width="310dp"
                 android:layout_height="45dp"
                 android:orientation="horizontal"
                 android:background="@drawable/buttonjoke"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="15dp"
                 android:gravity="center_vertical"
                 >
 
@@ -97,8 +103,211 @@
                 android:background="@drawable/line"
                 android:layout_marginTop="5dp"
                 />
-            
+
+            <LinearLayout
+                android:onClick="CheckUncheck"
+                android:layout_width="310dp"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/buttonjoke"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:id="@+id/ButtonProgramming"
+                >
+
+                <CheckBox
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/checkbox_selector"
+                    android:button="@drawable/checkbox_selector"
+                    android:id="@+id/Programming"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Programming"
+                    android:textSize="32dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/loveyalikeasister"
+                    />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:onClick="CheckUncheck"
+                android:layout_width="310dp"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/buttonjoke"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:id="@+id/ButtonMisc"
+                >
+
+                <CheckBox
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/checkbox_selector"
+                    android:button="@drawable/checkbox_selector"
+                    android:id="@+id/Misc"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Misc"
+                    android:textSize="32dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/loveyalikeasister"
+                    />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:onClick="CheckUncheck"
+                android:layout_width="310dp"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/buttonjoke"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:id="@+id/ButtonDark"
+                >
+
+                <CheckBox
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/checkbox_selector"
+                    android:button="@drawable/checkbox_selector"
+                    android:id="@+id/Dark"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Dark"
+                    android:textSize="32dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/loveyalikeasister"
+                    />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:onClick="CheckUncheck"
+                android:layout_width="310dp"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/buttonjoke"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:id="@+id/ButtonPun"
+                >
+
+                <CheckBox
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/checkbox_selector"
+                    android:button="@drawable/checkbox_selector"
+                    android:id="@+id/Pun"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Pun"
+                    android:textSize="32dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/loveyalikeasister"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:onClick="CheckUncheck"
+                android:layout_width="310dp"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/buttonjoke"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:id="@+id/ButtonSpooky"
+                >
+
+                <CheckBox
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/checkbox_selector"
+                    android:button="@drawable/checkbox_selector"
+                    android:id="@+id/Spooky"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Spooky"
+                    android:textSize="32dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/loveyalikeasister"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:onClick="CheckUncheck"
+                android:layout_width="310dp"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/buttonjoke"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center_vertical"
+                android:id="@+id/ButtonChristmas"
+                >
+
+                <CheckBox
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/checkbox_selector"
+                    android:button="@drawable/checkbox_selector"
+                    android:id="@+id/Christmas"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Christmas"
+                    android:textSize="32dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/loveyalikeasister"
+                    />
+
+
+
+            </LinearLayout>
+
         </LinearLayout>
+
+
 
     </ScrollView>
 
@@ -110,6 +319,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Give me a joke"
         android:textSize="32dp"
+        android:id="@+id/GiveJoke"
         android:fontFamily="@font/loveyalikeasister"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
