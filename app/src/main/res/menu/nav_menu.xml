@@ -1,0 +1,35 @@
+
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+
+            android:id="@+id/nav_fav"
+            android:title="Favourite jokes"
+            android:icon="@drawable/filled_heart"
+            android:padding="10dp"
+            />
+
+        <item
+            android:id="@+id/nav_family_jokes"
+            android:title="Family friendly"
+            android:icon="@drawable/family"
+            android:padding="10dp" />
+
+        <item
+            android:id="@+id/nav_no_family_jokes"
+            android:title="Not family friendly"
+            android:icon="@drawable/no_children"
+            android:padding="10dp" />
+
+    </group>
+
+
+</menu>
+
+
+      
